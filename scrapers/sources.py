@@ -29,7 +29,7 @@ SOURCES = [
     # ================= UAE =================
     {
         "name": "EWEC (Emirates Water and Electricity Co) - Media",
-        "url": "https://www.ewec.ae/en/media",
+        "url": "https://www.ewec.ae/en/news",
         "country": "UAE",
         "tier": 0,
         "notes": "Sole procurer for Abu Dhabi; publishes RFP launches directly.",
@@ -106,7 +106,7 @@ SOURCES = [
     },
     {
         "name": "Argaam",
-        "url": "https://www.argaam.com/en/search?keyword={query}",
+        "url": "https://www.argaam.com/en/search?searchQuery={query}",
         "country": "Saudi Arabia",
         "tier": 1,
     },
@@ -132,7 +132,7 @@ SOURCES = [
     },
     {
         "name": "Enerdata",
-        "url": "https://www.enerdata.net/publications/daily-energy-news.html",
+        "url": "https://www.enerdata.net/publications/daily-energy-news/",
         "country": "regional",
         "tier": 2,
     },
@@ -163,14 +163,3 @@ SECTOR_KEYWORDS = {
 }
 
 COUNTRIES = ["Saudi Arabia", "UAE", "Qatar", "Oman", "Kuwait", "Bahrain"]
-
-# VERIFICATION LOG (June 2026):
-# - All Tier 0 URLs above confirmed live via search to carry real, current
-#   tender/RFP/PPA content matching target sectors.
-# - Kuwait has no equivalent clean Tier-0 feed; KAPP/MEW announcements surface
-#   reliably via SaudiGulf Projects, PV Magazine, and Enerdata instead.
-# - MEED requires subscription for full articles; headline/summary still useful
-#   as a corroboration signal, not a primary extraction source.
-# - Each scraper script must still be tested against its live page structure -
-#   verifying the URL returns real content is not the same as confirming the
-#   HTML is parseable; that's the next build step.
