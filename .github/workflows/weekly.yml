@@ -57,5 +57,12 @@ jobs:
           git config user.name "tender-tracker-bot"
           git config user.email "actions@github.com"
           git add dashboard/tenders.json dashboard/meta.json
-          git diff --quiet --cached || git commit -m "Weekly tender data update - $(date -u +'%Y-%m-%d')"
-          git push
+          
+          # Only run commit/pull/push if there are actually changes staged
+          if ! git diff --quiet --cached; then
+            git commit -m "Weekly tender data update - $(date -u +'%Y-%m-%d')"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No changes to commit."
+          fi
