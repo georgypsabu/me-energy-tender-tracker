@@ -1,403 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ME Energy Tender Tracker</title>
-<style>
-  :root {
-    --bg: #14181D;
-    --bg-panel: #1B2127;
-    --bg-row-hover: #20272E;
-    --border: #2A323B;
-    --text-primary: #E8E6E1;
-    --text-secondary: #8B9299;
-    --text-muted: #5C6470;
-    --accent: #C99A4B;
-    --confirmed: #4F9B6E;
-    --unverified: #C97B4B;
-    --font-display: 'Söhne', 'Inter', -apple-system, sans-serif;
-    --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text-primary);
-    font-family: var(--font-display);
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .topbar {
-    padding: 28px 32px 20px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .topbar h1 {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0 0 4px;
-    letter-spacing: -0.01em;
-  }
-
-  .topbar .subtitle {
-    color: var(--text-secondary);
-    font-size: 13px;
-    margin: 0;
-  }
-
-  .meta {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--text-muted);
-    text-align: right;
-  }
-
-  .meta .stat-row {
-    display: flex;
-    gap: 18px;
-    justify-content: flex-end;
-    margin-top: 6px;
-  }
-
-  .meta .stat-num {
-    color: var(--accent);
-    font-weight: 600;
-  }
-
-  .controls {
-    padding: 16px 32px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    border-bottom: 1px solid var(--border);
-    background: var(--bg-panel);
-  }
-
-  select, input[type="text"] {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    color: var(--text-primary);
-    padding: 7px 12px;
-    border-radius: 4px;
-    font-family: var(--font-display);
-    font-size: 13px;
-  }
-
-  input[type="text"] {
-    flex: 1;
-    min-width: 180px;
-  }
-
-  select:focus, input:focus {
-    outline: none;
-    border-color: var(--accent);
-  }
-
-  .table-wrap {
-    overflow-x: auto;
-    padding: 0 32px 40px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-
-  thead th {
-    text-align: left;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-muted);
-    font-weight: 600;
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border);
-    white-space: nowrap;
-  }
-
-  tbody tr {
-    border-bottom: 1px solid var(--border);
-    transition: background 0.15s ease;
-  }
-
-  tbody tr:hover {
-    background: var(--bg-row-hover);
-  }
-
-  tbody td {
-    padding: 12px 14px;
-    vertical-align: top;
-    font-size: 13px;
-  }
-
-  tbody tr.status-confirmed {
-    border-left: 3px solid var(--confirmed);
-  }
-
-  tbody tr.status-unverified {
-    border-left: 3px solid var(--unverified);
-  }
-
-  .project-name {
-    font-weight: 600;
-    color: var(--text-primary);
-  }
-
-  .project-summary {
-    color: var(--text-secondary);
-    font-size: 12px;
-    margin-top: 3px;
-    max-width: 320px;
-  }
-
-  .pill {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 100px;
-    font-size: 11px;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-
-  .pill-confirmed { background: rgba(79,155,110,0.15); color: var(--confirmed); }
-  .pill-unverified { background: rgba(201,123,75,0.15); color: var(--unverified); }
-
-  .mono { font-family: var(--font-mono); color: var(--text-secondary); font-size: 12px; }
-
-  .sector-tag {
-    font-size: 11px;
-    color: var(--text-secondary);
-    font-family: var(--font-mono);
-  }
-
-  .source-link {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 12px;
-  }
-  .source-link:hover { text-decoration: underline; }
-
-  .empty-state {
-    padding: 60px 32px;
-    text-align: center;
-    color: var(--text-muted);
-  }
-
-  .empty-state h2 {
-    color: var(--text-secondary);
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-
-  .dev-list {
-    font-size: 12px;
-    color: var(--text-secondary);
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tender Tracker Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9f9; }
+        h1 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        tr:hover { background-color: #f1f1f1; }
+        a { color: #0056b3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div>
-    <h1>Middle East Energy Tender Tracker</h1>
-    <p class="subtitle">Renewables · Power &amp; Distribution · EV — Saudi Arabia, UAE, Qatar, Oman, Kuwait, Bahrain</p>
-  </div>
-  <div class="meta" id="meta-block">
-    <div>Loading...</div>
-  </div>
-</div>
+    <h1>Energy Tender Tracker</h1>
+    <p>Latest scraped tenders.</p>
 
-<div class="controls">
-  <select id="filter-country">
-    <option value="">All countries</option>
-  </select>
-  <select id="filter-sector">
-    <option value="">All sectors</option>
-  </select>
-  <select id="filter-status">
-    <option value="">All statuses</option>
-    <option value="Confirmed">Confirmed</option>
-    <option value="Unverified - single source">Unverified - single source</option>
-  </select>
-  <select id="filter-stage">
-    <option value="">All stages</option>
-  </select>
-  <input type="text" id="filter-search" placeholder="Search project, client, or developer...">
-</div>
+    <div id="status">Loading data...</div>
 
-<div class="table-wrap">
-  <table id="tenders-table">
-    <thead>
-      <tr>
-        <th>Project</th>
-        <th>Country</th>
-        <th>Sector</th>
-        <th>Stage</th>
-        <th>Client / Authority</th>
-        <th>Capacity / Value</th>
-        <th>Date / Deadline</th>
-        <th>Status</th>
-        <th>Source</th>
-      </tr>
-    </thead>
-    <tbody id="tenders-body"></tbody>
-  </table>
-  <div class="empty-state" id="empty-state" style="display:none;">
-    <h2>No tenders match these filters</h2>
-    <p>Try widening your search or clearing a filter.</p>
-  </div>
-</div>
+    <table id="tenderTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Organization</th>
+                <th>Deadline</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            </tbody>
+    </table>
 
-<script>
-let allTenders = [];
-
-async function loadData() {
-  try {
-    const [tendersRes, metaRes] = await Promise.all([
-      fetch('tenders.json').catch(() => null),
-      fetch('meta.json').catch(() => null),
-    ]);
-
-    allTenders = tendersRes && tendersRes.ok ? await tendersRes.json() : [];
-    const meta = metaRes && metaRes.ok ? await metaRes.json() : null;
-
-    renderMeta(meta);
-    populateFilters();
-    render();
-  } catch (e) {
-    document.getElementById('meta-block').innerHTML = '<div>Error loading data</div>';
-    console.error(e);
-  }
-}
-
-function renderMeta(meta) {
-  const block = document.getElementById('meta-block');
-  if (!meta) {
-    block.innerHTML = '<div>No run data yet</div>';
-    return;
-  }
-  const date = new Date(meta.last_run);
-  block.innerHTML = `
-    <div>Last updated: ${date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</div>
-    <div class="stat-row">
-      <div><span class="stat-num">${meta.total_tenders}</span> tracked</div>
-      <div><span class="stat-num">${meta.new_this_run}</span> new</div>
-      <div><span class="stat-num">${meta.updated_this_run}</span> updated</div>
-    </div>
-  `;
-}
-
-function populateFilters() {
-  const countries = [...new Set(allTenders.map(t => t.country).filter(Boolean))].sort();
-  const sectors = [...new Set(allTenders.map(t => t.sector).filter(Boolean))].sort();
-  const stages = [...new Set(allTenders.map(t => t.stage).filter(Boolean))].sort();
-
-  const fill = (id, values) => {
-    const el = document.getElementById(id);
-    values.forEach(v => {
-      const opt = document.createElement('option');
-      opt.value = v;
-      opt.textContent = v;
-      el.appendChild(opt);
-    });
-  };
-
-  fill('filter-country', countries);
-  fill('filter-sector', sectors);
-  fill('filter-stage', stages);
-}
-
-function statusClass(status) {
-  return status === 'Confirmed' ? 'confirmed' : 'unverified';
-}
-
-function render() {
-  const country = document.getElementById('filter-country').value;
-  const sector = document.getElementById('filter-sector').value;
-  const status = document.getElementById('filter-status').value;
-  const stage = document.getElementById('filter-stage').value;
-  const search = document.getElementById('filter-search').value.toLowerCase();
-
-  const filtered = allTenders.filter(t => {
-    if (country && t.country !== country) return false;
-    if (sector && t.sector !== sector) return false;
-    if (status && t.status !== status) return false;
-    if (stage && t.stage !== stage) return false;
-    if (search) {
-      const haystack = [
-        t.project_name, t.client_authority, t.summary,
-        ...(t.developers_bidders || [])
-      ].join(' ').toLowerCase();
-      if (!haystack.includes(search)) return false;
-    }
-    return true;
-  });
-
-  // sort by last_updated, most recent first
-  filtered.sort((a, b) => new Date(b.last_updated || 0) - new Date(a.last_updated || 0));
-
-  const tbody = document.getElementById('tenders-body');
-  const emptyState = document.getElementById('empty-state');
-
-  if (filtered.length === 0) {
-    tbody.innerHTML = '';
-    emptyState.style.display = 'block';
-    return;
-  }
-  emptyState.style.display = 'none';
-
-  tbody.innerHTML = filtered.map(t => {
-    const sCls = statusClass(t.status);
-    const lastSource = (t.source_history && t.source_history.length)
-      ? t.source_history[t.source_history.length - 1]
-      : null;
-
-    return `
-      <tr class="status-${sCls}">
-        <td>
-          <div class="project-name">${escapeHtml(t.project_name || 'Unnamed project')}</div>
-          ${t.summary ? `<div class="project-summary">${escapeHtml(t.summary)}</div>` : ''}
-          ${t.developers_bidders && t.developers_bidders.length ? `<div class="dev-list">${escapeHtml(t.developers_bidders.join(', '))}</div>` : ''}
-        </td>
-        <td>${escapeHtml(t.country || '—')}</td>
-        <td><span class="sector-tag">${escapeHtml(t.sector || '—')}</span></td>
-        <td>${escapeHtml(t.stage || '—')}</td>
-        <td>${escapeHtml(t.client_authority || '—')}</td>
-        <td class="mono">${escapeHtml(t.capacity_or_value || '—')}</td>
-        <td class="mono">${escapeHtml(t.deadline_or_date || '—')}</td>
-        <td><span class="pill pill-${sCls}">${escapeHtml(t.status || '—')}</span></td>
-        <td>${lastSource ? `<a class="source-link" href="${escapeHtml(lastSource.source_url)}" target="_blank" rel="noopener">${escapeHtml(lastSource.source)}</a>` : '—'}</td>
-      </tr>
-    `;
-  }).join('');
-}
-
-function escapeHtml(str) {
-  if (str === null || str === undefined) return '';
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-['filter-country', 'filter-sector', 'filter-status', 'filter-stage'].forEach(id => {
-  document.getElementById(id).addEventListener('change', render);
-});
-document.getElementById('filter-search').addEventListener('input', render);
-
-loadData();
-</script>
+    <script>
+        // Fetch the JSON file generated by your GitHub Action
+        fetch('dashboard/tenders.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Could not find tenders.json');
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('status').style.display = 'none';
+                document.getElementById('tenderTable').style.display = 'table';
+                
+                const tbody = document.getElementById('tableBody');
+                
+                // Loop through the data and create table rows
+                data.forEach(tender => {
+                    const row = document.createElement('tr');
+                    
+                    // Note: You may need to change 'tender.title', 'tender.link', etc. 
+                    // to match the exact labels Groq is outputting in your JSON.
+                    row.innerHTML = `
+                        <td>${tender.title || tender.Name || 'N/A'}</td>
+                        <td>${tender.organization || tender.Company || 'N/A'}</td>
+                        <td>${tender.deadline || tender.Date || 'N/A'}</td>
+                        <td><a href="${tender.link || tender.URL || '#'}" target="_blank">View Tender</a></td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                document.getElementById('status').innerHTML = "<b>Notice:</b> Data is not ready yet. Wait for the GitHub Action to finish running and generate the tenders.json file.";
+                console.error(error);
+            });
+    </script>
 
 </body>
 </html>
