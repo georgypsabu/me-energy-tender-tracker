@@ -16,7 +16,7 @@
     "summary": "Wind farm project",
     "status": "Confirmed",
     "first_seen": "2026-06-22T05:19:30.730823+00:00",
-    "last_updated": "2026-06-22T19:00:51.776658+00:00",
+    "last_updated": "2026-06-29T17:15:42.599075+00:00",
     "source_history": [
       {
         "source": "Nama Power & Water Procurement (OPWP) - News",
@@ -38,6 +38,13 @@
         "source_url": "https://omanpwp.om/news",
         "stage_reported": "PPA Signed",
         "seen_at": "2026-06-22T19:00:51.776658+00:00"
+      },
+      {
+        "source": "Nama Power & Water Procurement (OPWP) - News",
+        "source_tier": 0,
+        "source_url": "https://omanpwp.om/news",
+        "stage_reported": "PPA Signed",
+        "seen_at": "2026-06-29T17:15:42.599075+00:00"
       }
     ]
   },
@@ -57,7 +64,7 @@
     "summary": "Wind power project",
     "status": "Confirmed",
     "first_seen": "2026-06-22T05:19:30.730840+00:00",
-    "last_updated": "2026-06-22T19:00:51.776673+00:00",
+    "last_updated": "2026-06-29T17:15:42.599076+00:00",
     "source_history": [
       {
         "source": "Nama Power & Water Procurement (OPWP) - News",
@@ -79,6 +86,13 @@
         "source_url": "https://omanpwp.om/news",
         "stage_reported": "PPA Signed",
         "seen_at": "2026-06-22T19:00:51.776673+00:00"
+      },
+      {
+        "source": "Nama Power & Water Procurement (OPWP) - News",
+        "source_tier": 0,
+        "source_url": "https://omanpwp.om/news",
+        "stage_reported": "PPA Signed",
+        "seen_at": "2026-06-29T17:15:42.599076+00:00"
       }
     ]
   },
@@ -89,13 +103,16 @@
     "sector": "Power & Distribution",
     "stage": "Bids Received",
     "client_authority": "Nama Power and Water Procurement",
-    "developers_bidders": [],
-    "capacity_or_value": null,
+    "developers_bidders": [
+      "KOWEPO-Led",
+      "Nebras-Led"
+    ],
+    "capacity_or_value": "OMR 1 billion",
     "deadline_or_date": null,
     "summary": "Power projects",
     "status": "Confirmed",
     "first_seen": "2026-06-22T05:19:30.730843+00:00",
-    "last_updated": "2026-06-22T19:00:51.776676+00:00",
+    "last_updated": "2026-06-29T17:15:42.599082+00:00",
     "source_history": [
       {
         "source": "Nama Power & Water Procurement (OPWP) - News",
@@ -117,6 +134,20 @@
         "source_url": "https://omanpwp.om/news",
         "stage_reported": "Bids Received",
         "seen_at": "2026-06-22T19:00:51.776676+00:00"
+      },
+      {
+        "source": "Nama Power & Water Procurement (OPWP) - News",
+        "source_tier": 0,
+        "source_url": "https://omanpwp.om/news",
+        "stage_reported": "Awarded",
+        "seen_at": "2026-06-29T17:15:42.599072+00:00"
+      },
+      {
+        "source": "Nama Power & Water Procurement (OPWP) - News",
+        "source_tier": 0,
+        "source_url": "https://omanpwp.om/news",
+        "stage_reported": "Bids Received",
+        "seen_at": "2026-06-29T17:15:42.599082+00:00"
       }
     ]
   },
@@ -163,7 +194,7 @@
     "project_name": "Ibri III Solar IPP",
     "country": "Oman",
     "sector": "Renewables",
-    "stage": "RFQ/Prequalification",
+    "stage": "Shortlisted",
     "client_authority": "Nama Power and Water Procurement",
     "developers_bidders": [],
     "capacity_or_value": "500 MW",
@@ -171,7 +202,7 @@
     "summary": "Solar project",
     "status": "Confirmed",
     "first_seen": "2026-06-22T05:19:30.730848+00:00",
-    "last_updated": "2026-06-22T19:00:51.776680+00:00",
+    "last_updated": "2026-06-29T17:15:42.599094+00:00",
     "source_history": [
       {
         "source": "Nama Power & Water Procurement (OPWP) - News",
@@ -193,6 +224,13 @@
         "source_url": "https://omanpwp.om/news",
         "stage_reported": "RFQ/Prequalification",
         "seen_at": "2026-06-22T19:00:51.776680+00:00"
+      },
+      {
+        "source": "Nama Power & Water Procurement (OPWP) - News",
+        "source_tier": 0,
+        "source_url": "https://omanpwp.om/news",
+        "stage_reported": "Shortlisted",
+        "seen_at": "2026-06-29T17:15:42.599094+00:00"
       }
     ]
   },
@@ -204,12 +242,12 @@
     "stage": "RFQ/Prequalification",
     "client_authority": "Nama Power and Water Procurement",
     "developers_bidders": [],
-    "capacity_or_value": null,
+    "capacity_or_value": "Half a Billion RO",
     "deadline_or_date": null,
     "summary": "Wind projects",
     "status": "Confirmed",
     "first_seen": "2026-06-22T05:19:30.730853+00:00",
-    "last_updated": "2026-06-22T19:00:51.776682+00:00",
+    "last_updated": "2026-06-29T17:15:42.599087+00:00",
     "source_history": [
       {
         "source": "Nama Power & Water Procurement (OPWP) - News",
@@ -231,6 +269,13 @@
         "source_url": "https://omanpwp.om/news",
         "stage_reported": "RFQ/Prequalification",
         "seen_at": "2026-06-22T19:00:51.776682+00:00"
+      },
+      {
+        "source": "Nama Power & Water Procurement (OPWP) - News",
+        "source_tier": 0,
+        "source_url": "https://omanpwp.om/news",
+        "stage_reported": "RFQ/Prequalification",
+        "seen_at": "2026-06-29T17:15:42.599087+00:00"
       }
     ]
   },
@@ -287,7 +332,7 @@
     "summary": "India tenders battery storage",
     "status": "Unverified - single source",
     "first_seen": "2026-06-22T05:20:09.204188+00:00",
-    "last_updated": "2026-06-22T19:01:31.601873+00:00",
+    "last_updated": "2026-06-29T17:16:44.146597+00:00",
     "source_history": [
       {
         "source": "PV Magazine",
@@ -309,6 +354,13 @@
         "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
         "stage_reported": "RFQ/Prequalification",
         "seen_at": "2026-06-22T19:01:31.601873+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
+        "stage_reported": "RFQ/Prequalification",
+        "seen_at": "2026-06-29T17:16:44.146597+00:00"
       }
     ]
   },
@@ -317,7 +369,7 @@
     "project_name": "Fortum-NBCC EV Charging Stations",
     "country": "India",
     "sector": "EV",
-    "stage": "Bids Received",
+    "stage": "RFP Issued",
     "client_authority": "NBCC",
     "developers_bidders": [
       "ABB",
@@ -328,7 +380,7 @@
     "summary": "Fortum builds EV charging stations",
     "status": "Unverified - single source",
     "first_seen": "2026-06-22T05:20:09.204205+00:00",
-    "last_updated": "2026-06-22T19:01:31.601892+00:00",
+    "last_updated": "2026-06-29T17:16:44.146617+00:00",
     "source_history": [
       {
         "source": "PV Magazine",
@@ -371,6 +423,20 @@
         "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
         "stage_reported": "Bids Received",
         "seen_at": "2026-06-22T19:01:31.601892+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
+        "stage_reported": "Announced",
+        "seen_at": "2026-06-29T17:16:44.146614+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
+        "stage_reported": "RFP Issued",
+        "seen_at": "2026-06-29T17:16:44.146617+00:00"
       }
     ]
   },
@@ -379,7 +445,7 @@
     "project_name": "Total EV Charging Stations Netherlands",
     "country": "Netherlands",
     "sector": "EV",
-    "stage": "Awarded",
+    "stage": "Announced",
     "client_authority": null,
     "developers_bidders": [
       "Total"
@@ -389,7 +455,7 @@
     "summary": "Total deploys EV charging",
     "status": "Unverified - single source",
     "first_seen": "2026-06-22T05:20:09.204210+00:00",
-    "last_updated": "2026-06-22T19:01:31.601894+00:00",
+    "last_updated": "2026-06-29T17:16:44.146619+00:00",
     "source_history": [
       {
         "source": "PV Magazine",
@@ -411,6 +477,13 @@
         "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
         "stage_reported": "Awarded",
         "seen_at": "2026-06-22T19:01:31.601894+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
+        "stage_reported": "Announced",
+        "seen_at": "2026-06-29T17:16:44.146619+00:00"
       }
     ]
   },
@@ -429,7 +502,7 @@
     "summary": "Total wins Paris EV tender",
     "status": "Unverified - single source",
     "first_seen": "2026-06-22T05:20:09.204212+00:00",
-    "last_updated": "2026-06-22T19:01:31.601896+00:00",
+    "last_updated": "2026-06-29T17:16:44.146621+00:00",
     "source_history": [
       {
         "source": "PV Magazine",
@@ -451,6 +524,13 @@
         "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
         "stage_reported": "Awarded",
         "seen_at": "2026-06-22T19:01:31.601896+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
+        "stage_reported": "Awarded",
+        "seen_at": "2026-06-29T17:16:44.146621+00:00"
       }
     ]
   },
@@ -459,7 +539,7 @@
     "project_name": "Isofoton Ferrolinera EV Charging",
     "country": "Spain",
     "sector": "EV",
-    "stage": "Awarded",
+    "stage": "Announced",
     "client_authority": null,
     "developers_bidders": [
       "Isofoton"
@@ -469,7 +549,7 @@
     "summary": "Isofoton commercializes EV charging",
     "status": "Unverified - single source",
     "first_seen": "2026-06-22T05:20:09.204213+00:00",
-    "last_updated": "2026-06-22T19:01:31.601898+00:00",
+    "last_updated": "2026-06-29T17:16:44.146623+00:00",
     "source_history": [
       {
         "source": "PV Magazine",
@@ -491,6 +571,13 @@
         "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
         "stage_reported": "Awarded",
         "seen_at": "2026-06-22T19:01:31.601898+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=EV%20charging%20tender",
+        "stage_reported": "Announced",
+        "seen_at": "2026-06-29T17:16:44.146623+00:00"
       }
     ]
   },
@@ -509,7 +596,7 @@
     "summary": "Turkey receives 77 solar tender applications",
     "status": "Unverified - single source",
     "first_seen": "2026-06-22T10:49:11.575480+00:00",
-    "last_updated": "2026-06-22T10:49:11.575508+00:00",
+    "last_updated": "2026-06-29T17:16:11.602781+00:00",
     "source_history": [
       {
         "source": "PV Magazine",
@@ -545,6 +632,41 @@
         "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
         "stage_reported": "RFQ/Prequalification",
         "seen_at": "2026-06-22T10:49:11.575508+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
+        "stage_reported": "RFQ/Prequalification",
+        "seen_at": "2026-06-29T17:16:11.602752+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
+        "stage_reported": "RFP Issued",
+        "seen_at": "2026-06-29T17:16:11.602773+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
+        "stage_reported": "RFP Issued",
+        "seen_at": "2026-06-29T17:16:11.602777+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
+        "stage_reported": "RFP Issued",
+        "seen_at": "2026-06-29T17:16:11.602779+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
+        "stage_reported": "RFQ/Prequalification",
+        "seen_at": "2026-06-29T17:16:11.602781+00:00"
       }
     ]
   },
@@ -561,7 +683,7 @@
     "summary": "Luxembourg launches two solar tenders",
     "status": "Unverified - single source",
     "first_seen": "2026-06-22T10:49:11.575493+00:00",
-    "last_updated": "2026-06-22T10:49:11.575501+00:00",
+    "last_updated": "2026-06-29T17:16:11.602783+00:00",
     "source_history": [
       {
         "source": "PV Magazine",
@@ -583,6 +705,27 @@
         "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
         "stage_reported": "RFP Issued",
         "seen_at": "2026-06-22T10:49:11.575501+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
+        "stage_reported": "RFP Issued",
+        "seen_at": "2026-06-29T17:16:11.602769+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
+        "stage_reported": "RFP Issued",
+        "seen_at": "2026-06-29T17:16:11.602771+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
+        "stage_reported": "RFP Issued",
+        "seen_at": "2026-06-29T17:16:11.602783+00:00"
       }
     ]
   },
@@ -599,7 +742,7 @@
     "summary": "Bangladesh had a large off-grid solar program",
     "status": "Unverified - single source",
     "first_seen": "2026-06-22T10:49:11.575500+00:00",
-    "last_updated": "2026-06-22T10:49:11.575504+00:00",
+    "last_updated": "2026-06-29T17:16:11.602775+00:00",
     "source_history": [
       {
         "source": "PV Magazine",
@@ -614,6 +757,13 @@
         "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
         "stage_reported": "RFP Issued",
         "seen_at": "2026-06-22T10:49:11.575504+00:00"
+      },
+      {
+        "source": "PV Magazine",
+        "source_tier": 2,
+        "source_url": "https://www.pv-magazine.com/?s=solar%20tender",
+        "stage_reported": "RFP Issued",
+        "seen_at": "2026-06-29T17:16:11.602775+00:00"
       }
     ]
   },
@@ -905,6 +1055,54 @@
         "source_url": "https://www.meed.com/",
         "stage_reported": "RFQ/Prequalification",
         "seen_at": "2026-06-22T19:00:54.977535+00:00"
+      }
+    ]
+  },
+  {
+    "id": "oman-adam solar ipp",
+    "project_name": "Adam Solar IPP",
+    "country": "Oman",
+    "sector": "Renewables",
+    "stage": "RFQ/Prequalification",
+    "client_authority": "Nama Power and Water Procurement",
+    "developers_bidders": [],
+    "capacity_or_value": null,
+    "deadline_or_date": null,
+    "summary": "Solar project RFQ launched",
+    "status": "Confirmed",
+    "first_seen": "2026-06-29T17:15:42.599051+00:00",
+    "last_updated": "2026-06-29T17:15:42.599051+00:00",
+    "source_history": [
+      {
+        "source": "Nama Power & Water Procurement (OPWP) - News",
+        "source_tier": 0,
+        "source_url": "https://omanpwp.om/news",
+        "stage_reported": "RFQ/Prequalification",
+        "seen_at": "2026-06-29T17:15:42.599051+00:00"
+      }
+    ]
+  },
+  {
+    "id": "oman-sinaw solar ipp",
+    "project_name": "Sinaw Solar IPP",
+    "country": "Oman",
+    "sector": "Renewables",
+    "stage": "RFQ/Prequalification",
+    "client_authority": "Nama Power and Water Procurement",
+    "developers_bidders": [],
+    "capacity_or_value": null,
+    "deadline_or_date": null,
+    "summary": "Solar project RFQ launched",
+    "status": "Confirmed",
+    "first_seen": "2026-06-29T17:15:42.599069+00:00",
+    "last_updated": "2026-06-29T17:15:42.599069+00:00",
+    "source_history": [
+      {
+        "source": "Nama Power & Water Procurement (OPWP) - News",
+        "source_tier": 0,
+        "source_url": "https://omanpwp.om/news",
+        "stage_reported": "RFQ/Prequalification",
+        "seen_at": "2026-06-29T17:15:42.599069+00:00"
       }
     ]
   }
